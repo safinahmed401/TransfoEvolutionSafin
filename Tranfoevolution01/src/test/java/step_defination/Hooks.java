@@ -1,9 +1,21 @@
+
 package step_defination;
 
-import base.Main;
 
-public class Hooks extends Main {
-  //before and after method
-	// pre and post annotation
+
+import base.Main;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+public class Hooks extends Main{
+
+	@Before
+	public void loadBrowser() {
+		initialization();
+	}
 	
+	@After
+	public void closeBrowser() {
+		tearDown();
+	}
 }
