@@ -25,14 +25,14 @@
  Scenario: Verify calendar drop down menu is visible for the user to select the date
  Given user lands in Transfotech Academy homepage
  When user clicks on Book an appointment tab
- And user is able to fill up all the required information up until date or /mm/dd/yyyy
+ And user is able to fill up all the required information up until date or "mm/dd/yyyy"
  Then user when ready to fill up or enter mm/dd/yyyy user can 
  access a drop down menu from the corner for them to easily enter a valid date
  
  Scenario: Verify Calender drop down menu is functional and user can interact with it
  Given user lands in Transfotech Academy homepage
  And user clicks on Book an appointment tab
- And user is able to fill up all the required information up until date or /mm/dd/yyyy
+ And user is able to fill up all the required information up until date or "mm/dd/yyyy"
  When user is ready to fill up or enter mm/dd/yyyy user can access a 
  drop down menu from the corner for them to easily enter a valid date
  Then user is also able to interact and browse through the drop down calendar option
@@ -40,7 +40,7 @@
  Scenario: Verify dates are placed in correct format after selecting them from the drop down option
  Given user lands in Transfotech Academy homepage
  And user clicks on Book an appointment tab
- And user is able to fill up all the required information up until date or /mm/dd/yyyy
+ And user is able to fill up all the required information up until date or "mm/dd/yyyy"
  When user is ready to fill up or enter mm/dd/yyyy user can access a drop 
  down menu from the corner for them to easily enter a valid date
  Then the dates should display exactly what the user had selected form the drop down options
@@ -65,7 +65,7 @@
  Given user lands in Transfotech Academy homepage
  And user clicks on Book an appointment tab
  When user fills up all the 
- required information "Your name, Phone Number, Email, Appointment Subject, mm/dd//yyyy, message"
+ required information "Your name", "Phone Number", "Email", "Appointment Subject", "mm/dd//yyyy", "message"
  Then if user wishes to make sure all information are placed correctly they
  can browse through the box/tab with the scroll bar provided at the bottom
  
@@ -73,7 +73,7 @@
  Given user lands in Transfotech Academy homepage
  And user clicks on Book an appointment tab
  And user fills up all the 
- required information "Your name, Phone Number, Email, Appointment Subject, mm/dd//yyyy, message"
+ required information "Your name", "Phone Number", "Email", "Appointment Subject", "mm/dd//yyyy", "message"
  When user clicks on "Send Message" button
  And a small wait icon should be displayed while the message
  is being send for the better understanding of the user that their message is being sent
@@ -94,7 +94,7 @@
  Scenario: Verify Book an Appointment tab/box is set back to default after user exits the box halfway incomplete   
  Given user lands in Transfotech Academy homepage
  When user clicks on Book an appointment tab
- And user is filling up the required information's but decides to exit halfway
+ And user is filling up the required information but decides to exit halfway
  Then upon slectecting the Book an appointment option again all the information
  entered should be erased and set back to default
 
