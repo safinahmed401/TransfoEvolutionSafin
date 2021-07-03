@@ -9,12 +9,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Main {     //constructor
+public class Base {     //constructor
 	
       public static Properties prop;
 
       public static WebDriver driver;
-      public Main(){
+      public Base(){
       try {
       prop = new Properties();
       FileInputStream file = new FileInputStream("C:\\Users\\Safin\\Desktop\\java workspace"
